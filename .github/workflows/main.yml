@@ -1,0 +1,19 @@
+
+name: Test carry.team
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '*/10  * * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
