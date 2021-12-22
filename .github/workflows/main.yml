@@ -20,7 +20,7 @@ jobs:
           cd $GITHUB_WORKSPACE
           python -m pip install --upgrade pip
           python -m pip install selenium
-      - uses: browser-actions/setup-chrome@97.0.4692.36
+      - uses: browser-actions/setup-chrome@97
       - run: chrome --version
       - name: Run Tests    
         run: python -m unittest TestCases.py
