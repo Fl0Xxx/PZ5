@@ -12,7 +12,7 @@ class PythonOrgSearch(unittest.TestCase):
         # options = webdriver.ChromeOptions()
         # options.add_argument("--start-maximized")
         # self.driver = webdriver.Chrome(chrome_options=options)
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(executable_path=r'C:\Users\zloe_pechenko\Desktop\Tests')
         
         
     def test_keystone_1(self):
