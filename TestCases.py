@@ -9,9 +9,10 @@ from selenium.webdriver.common.keys import Keys
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
-        options = webdriver.ChromeOptions()
-        options.add_argument("--start-maximized")
-        self.driver = webdriver.Chrome(chrome_options=options)
+        # options = webdriver.ChromeOptions()
+        # options.add_argument("--start-maximized")
+        # self.driver = webdriver.Chrome(chrome_options=options)
+        self.driver = webdriver.Chrome()
         
         
     def test_keystone_1(self):
@@ -21,7 +22,7 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
         driver.get("http://carry.team/mythic")
         
-        element = driver.find_element_by_name("level_selec")
+        element = driver.find_element_by_name("level_select")
         all_options = element.find_elements_by_tag_name("option")
         option = all_options[0]
         option.click()
