@@ -19,9 +19,9 @@ class PythonOrgSearch(unittest.TestCase):
         Тест-кейс №1 (Добавление в корзину продукта с keystone level равным 1)
         """
         driver = self.driver
-        driver.get("http://127.0.0.1:8000/mythic")
+        driver.get("http://carry.team/mythic")
         
-        element = driver.find_element_by_name("level_select")
+        element = driver.find_element_by_name("level_selec")
         all_options = element.find_elements_by_tag_name("option")
         option = all_options[0]
         option.click()
