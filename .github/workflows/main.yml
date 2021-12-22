@@ -21,6 +21,8 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install selenium
       - uses: browser-actions/setup-chrome@stable
+        with:
+          chrome-version: stable
       - run: chrome --version
       - name: Run Tests    
         run: python -m unittest TestCases.py
